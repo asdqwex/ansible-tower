@@ -1,0 +1,8 @@
+---
+- name: hostnameTest
+  hosts: all
+  user: root
+
+  tasks:
+
+  - debug: msg="Hostname {{ ansible_hostname }}"
