@@ -6,4 +6,4 @@
   tasks:
 
   - name: Log Hostname
-    shell: echo {{ ansible_hostname }}
+    shell: echo "{{ ansible_hostname }}"
