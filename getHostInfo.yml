@@ -1,0 +1,9 @@
+---
+- name: getHostInfo
+  hosts: all
+  user: root
+
+  tasks:
+
+  - name: get all the facts
+    setup: 
