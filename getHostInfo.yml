@@ -6,4 +6,6 @@
   tasks:
 
   - name: Log Hostname
-    shell: echo "this is a test}"
+    shell: echo "this is a test"
+
+  - debug: msg="Hostname {{ ansible_hostname }}"
