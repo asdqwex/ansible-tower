@@ -9,4 +9,4 @@
     user: name=tower comment="Ansible Tower Admin User" uid=1090
 
   - name: Drop sudoers template
-    template: src=/mine/sudoers dest=/etc/sudoers validate='visudo -cf %s'
+    template: src=mine/sudoers dest=/etc/sudoers validate='visudo -cf %s'
