@@ -1,5 +1,5 @@
 ---
-- name: getHostInfo
+- name: towerUser
   hosts: all
   user: root
 
@@ -7,3 +7,6 @@
 
   - name: add the tower user
     user: name=tower comment="Ansible Tower Admin User" uid=1040 group=admin
+
+  - name: Drop sudoers template
+    template: src=/mine/sudoers dest=/etc/sudoers validate='visudo -cf %s'
