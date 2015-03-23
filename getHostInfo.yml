@@ -11,4 +11,4 @@
   - name: log available facts
     setup: filter="*"
 
-  - debug: msg="Hostname: {{ ansible_hostname }}"
+  - debug: msg="Hostname {{ ansible_hostname }}"
