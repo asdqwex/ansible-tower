@@ -3,4 +3,5 @@
   hosts: all
   user: root
 
-  - user: name=tower comment="Ansible Tower Admin User" uid=1040 group=admin
+  - name: add the tower user
+    user: name=tower comment="Ansible Tower Admin User" uid=1040 group=admin
