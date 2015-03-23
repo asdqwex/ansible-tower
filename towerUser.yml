@@ -1,0 +1,6 @@
+---
+- name: getHostInfo
+  hosts: all
+  user: root
+
+  - user: name=tower comment="Ansible Tower Admin User" uid=1040 group=admin
