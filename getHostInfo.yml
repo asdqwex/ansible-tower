@@ -5,5 +5,5 @@
 
   tasks:
 
-  - name: get all the facts
-    setup: 
+  - name: Log Hostname
+    shell: echo {{ ansible_hostname }}
