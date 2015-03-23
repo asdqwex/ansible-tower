@@ -15,7 +15,7 @@
     file: path=/home/tower/.ssh state=directory owner=tower group=tower mode=700
 
   - name: Drop tower ssh pub key template
-    template: src=mine/tower.pub dest=/home/tower/.ssh/authorized_keys mode=600
+    template: src=mine/tower.pub dest=/home/tower/.ssh/authorized_keys owner=tower group=tower mode=600
 
   - name: Drop sshd_config template
     template: src=mine/sshd_config dest=/etc/ssh/sshd_config
