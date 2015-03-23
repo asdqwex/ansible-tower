@@ -16,3 +16,9 @@
 
   - name: Drop tower ssh pub key template
     template: src=mine/tower.pub dest=/home/tower/.ssh/authorized_keys mode=600
+
+  - name: Drop sshd_config template
+    template: src=mine/sshd_config dest=/etc/ssh/sshd_config
+
+  - name: restart ssh service
+    service: name=sshd state=restarted
