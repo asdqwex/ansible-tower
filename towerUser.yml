@@ -1,6 +1,7 @@
 ---
 - name: towerUser
   hosts: all
+  sudo: yes
   user: tower
 
   tasks:
