@@ -1,7 +1,7 @@
 ---
 - name: towerUser
   hosts: all
-  user: root
+  user: tower
 
   tasks:
 
