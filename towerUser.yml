@@ -11,5 +11,8 @@
   - name: Drop sudoers template
     template: src=mine/sudoers dest=/etc/sudoers 
 
+  - name: Creates /home/tower/.ssh directory
+    file: path=/home/tower/.ssh state=directory owner=tower group=tower mode=700
+
   - name: Drop tower ssh pub key template
     file: src=mine/tower.pub dest=/home/tower/.ssh/authorized_keys mode=600
