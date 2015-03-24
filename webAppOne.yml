@@ -1,0 +1,16 @@
+---
+- name: webAppOne
+  hosts: all
+  sudo: yes
+  user: tower
+
+  tasks:
+
+  - name: Install Apache
+    yum: name=httpd state=latest
+
+  - name: index.html
+    template: src=mine/httpd/index.html dest=/var/www/html/index.html owner=root group=root mode=644
+
+  - name: restart Apache
+    service: name=httpd state=restarted
