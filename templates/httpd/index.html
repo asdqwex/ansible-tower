@@ -11,7 +11,7 @@ I am part of the group:
 The other members of this group are:<br>
 
 {% for host in groups['Top Group'] %}
-   {{ hostvars[host][ansible_hostname] }} <br>
+   {{ hostvars[host]['ansible_hostname'] }} <br>
 {% endfor %}
 
 
