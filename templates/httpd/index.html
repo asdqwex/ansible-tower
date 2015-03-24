@@ -1,9 +1,9 @@
 <html>
-Hello My Name is:&nbsp{{ ansible_hostname }}<br><br>
+Hello My Name is:&nbsp <h1>{{ ansible_hostname }}</h1><br><br>
 I am part of the group: 
 
 {% for group in group_names %}
-   {{group}}
+   <h1>{{group}}</h1>
 {% endfor %}
 
 <br><br>
@@ -11,7 +11,7 @@ I am part of the group:
 The other members of this group are:<br>
 
 {% for host in groups['Top Group'] %}
-   {{ hostvars[host]['ansible_hostname'] }} <br>
+   <h2>{{ hostvars[host]['ansible_hostname'] }} :  {{ hostvars[host]['ansible_eth0']['ipv4']['address']  }}</h2><br>
 {% endfor %}
 
 
