@@ -17,3 +17,6 @@
 
   - name: /etc/sysconfig/iptables
     template: src=templates/iptables dest=/etc/sysconfig/iptables owner=root group=root mode=644
+
+  - name: restart Iptables
+    service: name=iptables state=restarted
