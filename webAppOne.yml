@@ -10,7 +10,10 @@
     yum: name=httpd state=latest
 
   - name: index.html
-    template: src=mine/httpd/index.html dest=/var/www/html/index.html owner=root group=root mode=644
+    template: src=templates/httpd/index.html dest=/var/www/html/index.html owner=root group=root mode=644
 
   - name: restart Apache
     service: name=httpd state=restarted
+
+  - name: /etc/sysconfig/iptables
+    template: src=templates/iptables dest=/etc/sysconfig/iptables owner=root group=root mode=644
