@@ -1,3 +1,9 @@
 <html>
-{{ ansible_hostname }}
+Hello My Name is:&nbsp{{ ansible_hostname }}<br><br>
+I am part of these Groups: 
+
+{% for group in group_names %}
+   {{group}}
+{% endfor %}
+
 </html>
